@@ -98,12 +98,12 @@
 <meta name="keywords" content="Node.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js--level1">
-<meta property="og:url" content="http://yoursite.com/2017/11/07/Node-js-level1/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/11/07/Node-js__level 1/index.html">
 <meta property="og:site_name" content="神言乱语">
 <meta property="og:description" content="Codeschool昨天看了codeschool的第一章，后面要收费了，就没有继续看。但是第一章让我终于搞懂了callback，虽然说来惭愧，但是的确可以证明自己之前真的是学习不够主动，不怕，慢慢来。 callback的意思就是，JavaScript是单线程，所以一次只能执行一个操作。所以很容易写出blocking code，而因为JavaScript主要用于前端，与用户交互的地方很多，所以阻塞代">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/uploads/the_event_loop.png">
-<meta property="og:updated_time" content="2017-11-08T02:35:15.000Z">
+<meta property="og:updated_time" content="2017-11-08T06:46:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js--level1">
 <meta name="twitter:description" content="Codeschool昨天看了codeschool的第一章，后面要收费了，就没有继续看。但是第一章让我终于搞懂了callback，虽然说来惭愧，但是的确可以证明自己之前真的是学习不够主动，不怕，慢慢来。 callback的意思就是，JavaScript是单线程，所以一次只能执行一个操作。所以很容易写出blocking code，而因为JavaScript主要用于前端，与用户交互的地方很多，所以阻塞代">
@@ -136,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/07/Node-js-level1/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/07/Node-js__level 1/"/>
 
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/Node-js-level1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/Node-js__level 1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="神神">
@@ -353,6 +353,31 @@
 <p>learnyounode</p>
 </blockquote>
 <p><em>learn the basics of node: asynchronous i/o, http</em>.</p>
+<ol>
+<li><p>终端打印文字</p>
+<p><code>console.log(&#39;text&#39;)</code></p>
+</li>
+<li><p>接收一个或者多个命令行参数，并且在终端中打印出这些参数的和</p>
+<p>process这个全局对象可以获取命令行的参数。<code>process.argv</code>返回一个数组，包含了整条命令的所有部分。</p>
+<p><code>$ node program.js 1 2 3</code></p>
+<p><code>console.log(process.argv)</code></p>
+<p><code>[&#39;node&#39;, &#39;/path/to/program.js&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;]</code></p>
+<p>值得注意的是这个数组的元素都是字符串类型的，因此需要强制转化为数字。两种方法: <code>+process.argv[2]</code> 或者 <code>Number(process.argv[2])</code> 。</p>
+</li>
+<li><p>执行一个同步的文件读取操作，并在终端中打印出这个文件中的内容的行数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> contents = fs.readFileSync(process.argv[<span class="number">2</span>])</span><br><span class="line"><span class="keyword">const</span> lines = contents.toString().split(<span class="string">'\n'</span>).length - <span class="number">1</span></span><br><span class="line"><span class="built_in">console</span>.log(lines)</span><br></pre></td></tr></table></figure>
+<p>Buffer 对象是Node用来高效处理数据的方式，无论数据是ASCII还是二进制文件，或者其他的格式。Buffer可以很容易地通过调用toString()方法转换为字符串。</p>
+<p>.split()可以将字符串分割成字符串数组，接受不同的分隔符作为参数，这里使用的’\n’。</p>
+</li>
+<li><p>异步文件读取。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="keyword">const</span> file = process.argv[<span class="number">2</span>]</span><br><span class="line">fs.readFile(file, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="built_in">console</span>.error(err)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// fs.readFile(file, 'utf8', callback) 就直接返回string</span></span><br><span class="line">  <span class="keyword">const</span> lines = data.toString().split(<span class="string">'\n'</span>).length - <span class="number">1</span></span><br><span class="line">  <span class="built_in">console</span>.log(lines)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打印指定目录下的文件列表，并且以特定的文件扩展名来过滤这个列表。命令行参数有两个，第一个是指定的目录，第二个是指定的扩展名。</p>
+<p><code>fs.readdir()</code> 接收两个参数，第一个是一个路径，第二个则是回调函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> ext = <span class="string">'.'</span> + process.argv[<span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">fs.readdir(process.argv[<span class="number">2</span>], <span class="function"><span class="keyword">function</span> (<span class="params">err, list</span>) </span>&#123;</span><br><span class="line"> <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.error(err)</span><br><span class="line"></span><br><span class="line"> <span class="comment">// foreach </span></span><br><span class="line"> list.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (path.extname(item) === ext) &#123;</span><br><span class="line">     <span class="built_in">console</span>.log(item)</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>基本的I/O 操作暂告一个段落。</p>
+</li>
+</ol>
 
       
     </div>
@@ -468,7 +493,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
