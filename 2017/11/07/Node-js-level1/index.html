@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="en">
+<html class="theme-next mist use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Node.js," />
 
 
 
@@ -94,17 +94,20 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="Codeschool昨天看了codeschool的第一章，后面要收费了，就没有继续看。但是第一章让我终于搞懂了callback，虽然说来惭愧，但是的确可以证明自己之前真的是学习不够主动，不怕，慢慢来。 callback的意思就是，JavaScript是单线程，所以一次只能执行一个操作。所以很容易写出blocking code，而因为JavaScript主要用于前端，与用户交互的地方很多，所以阻塞代">
+<meta name="keywords" content="Node.js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/11/07/hello-world/index.html">
-<meta property="og:site_name" content="FightForPekingU">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:title" content="Node.js--level1">
+<meta property="og:url" content="http://yoursite.com/2017/11/07/Node-js-level1/index.html">
+<meta property="og:site_name" content="神言乱语">
+<meta property="og:description" content="Codeschool昨天看了codeschool的第一章，后面要收费了，就没有继续看。但是第一章让我终于搞懂了callback，虽然说来惭愧，但是的确可以证明自己之前真的是学习不够主动，不怕，慢慢来。 callback的意思就是，JavaScript是单线程，所以一次只能执行一个操作。所以很容易写出blocking code，而因为JavaScript主要用于前端，与用户交互的地方很多，所以阻塞代">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-07T21:57:00.000Z">
+<meta property="og:image" content="http://yoursite.com/uploads/the_event_loop.png">
+<meta property="og:updated_time" content="2017-11-08T02:35:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Node.js--level1">
+<meta name="twitter:description" content="Codeschool昨天看了codeschool的第一章，后面要收费了，就没有继续看。但是第一章让我终于搞懂了callback，虽然说来惭愧，但是的确可以证明自己之前真的是学习不够主动，不怕，慢慢来。 callback的意思就是，JavaScript是单线程，所以一次只能执行一个操作。所以很容易写出blocking code，而因为JavaScript主要用于前端，与用户交互的地方很多，所以阻塞代">
+<meta name="twitter:image" content="http://yoursite.com/uploads/the_event_loop.png">
 
 
 
@@ -112,7 +115,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -133,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/07/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/07/Node-js-level1/"/>
 
 
 
 
 
-  <title>Hello World | FightForPekingU</title>
+  <title>Node.js--level1 | 神言乱语</title>
   
 
 
@@ -175,7 +178,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">FightForPekingU</span>
+        <span class="site-title">神言乱语</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -262,16 +265,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/Node-js-level1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Fandy!">
+      <meta itemprop="name" content="神神">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FightForPekingU">
+      <meta itemprop="name" content="神言乱语">
     </span>
 
     
@@ -279,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Node.js--level1</h1>
         
 
         <div class="post-meta">
@@ -291,7 +294,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-07T13:57:00-08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-07T16:18:26-08:00">
                 2017-11-07
               </time>
             
@@ -329,15 +332,27 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h4 id="Codeschool"><a href="#Codeschool" class="headerlink" title="Codeschool"></a>Codeschool</h4><p>昨天看了codeschool的第一章，后面要收费了，就没有继续看。但是第一章让我终于搞懂了callback，虽然说来惭愧，但是的确可以证明自己之前真的是学习不够主动，不怕，慢慢来。</p>
+<p>callback的意思就是，JavaScript是单线程，所以一次只能执行一个操作。所以很容易写出blocking code，而因为JavaScript主要用于前端，与用户交互的地方很多，所以阻塞代码带来的用户体验非常差，所以就搞出来callback这个东西，就是某个操作比较费时的话，我就先把它register一下，比如读某个很大的文件，就让它慢慢读，然后我去进行后面的操作，但文件读完的时候，我会调用当时绑定的callback函数，这样就实现了non blocking。</p>
+ <a id="more"></a>
+<p>其实这样讲出来，感觉也不是完全的单线程，这是为什么呢？<br><strong>挖个坑。才写第一篇技术文章就开始挖坑了，哪天事情比较多的时候，就填坑好了。</strong></p>
+<h5 id="What-is-Node-js"><a href="#What-is-Node-js" class="headerlink" title="What is Node.js ?"></a>What is Node.js ?</h5><p>Allows you to build scalable network applications <strong>using JavaScript</strong> on the server-side.</p>
+<p>It’s <strong>fast</strong> because it’s build on Google Chrome’s <strong>V8 JavaScript Engine</strong> which is mostly C code.</p>
+<p>It uses non-blocking I/O model.</p>
+<h5 id="Blocking-Code-VS-Non-Blocking-Code"><a href="#Blocking-Code-VS-Non-Blocking-Code" class="headerlink" title="Blocking Code VS Non-Blocking Code"></a>Blocking Code VS Non-Blocking Code</h5><ul>
+<li><p>Blocking Code</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Read file from Filesystem, set equal to &apos;contents&apos;</span><br><span class="line">Print contents</span><br><span class="line">Do something else</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Non-Blocking Code </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Read file from Filesystem</span><br><span class="line">  whenever you&apos;re complete, print the contents  &lt;--- callback </span><br><span class="line">Do something else</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Event-Loop"><a href="#Event-Loop" class="headerlink" title="Event Loop"></a>Event Loop</h5><p><img src="/uploads/the_event_loop.png" alt="events loop"></p>
+<h4 id="nodeschool"><a href="#nodeschool" class="headerlink" title="nodeschool"></a>nodeschool</h4><p>昨天还发现另外一个网站nodeschool, 这个网站完全免费，而且是通过一关一关的做练习来掌握知识的，而且目前已经有很多资源了，感觉很好，接下来要开始写作业的时候，感觉都可以做几个小练习然后每天的文章也就有了。嗯。五星推荐。</p>
+<blockquote>
+<p>learnyounode</p>
+</blockquote>
+<p><em>learn the basics of node: asynchronous i/o, http</em>.</p>
 
       
     </div>
@@ -353,11 +368,33 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Node-js/" rel="tag"># Node.js</a>
+          
+        </div>
+      
 
       
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/07/写给半年后的自己/" rel="prev" title="写给半年后的自己">
+                写给半年后的自己 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -420,10 +457,10 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
-               alt="Fandy!" />
-          <p class="site-author-name" itemprop="name">Fandy!</p>
+               alt="神神" />
+          <p class="site-author-name" itemprop="name">神神</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">一个神经病的自我救赎</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -431,7 +468,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -439,6 +476,15 @@
 
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
           
 
         </nav>
@@ -470,7 +516,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Codeschool"><span class="nav-number">1.</span> <span class="nav-text">Codeschool</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#What-is-Node-js"><span class="nav-number">1.1.</span> <span class="nav-text">What is Node.js ?</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Blocking-Code-VS-Non-Blocking-Code"><span class="nav-number">1.2.</span> <span class="nav-text">Blocking Code VS Non-Blocking Code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Event-Loop"><span class="nav-number">1.3.</span> <span class="nav-text">Event Loop</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nodeschool"><span class="nav-number">2.</span> <span class="nav-text">nodeschool</span></a></li></ol></div>
             
 
           </div>
@@ -497,7 +543,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Fandy!</span>
+  <span class="author" itemprop="copyrightHolder">神神</span>
 </div>
 
 
@@ -508,7 +554,7 @@
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Gemini
+    NexT.Mist
   </a>
 </div>
 
@@ -587,13 +633,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
