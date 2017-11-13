@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="算是简单的题目。和tree有关的题目都可以朝递归的方向去思考。 tree有可能是binary search tree， 也可能不是。 是的话，直接根据两个node和root的值的关系recursively查找。 不是的话，就根据返回值是否为null来判断。 google上看来的解释  初次接触某种题型一时没有思路的时候，可以从简单的例子开始分析。  这其实是一种很好的方法，很多大神往往是非常擅于从">
+<meta name="description" content="Description: Divide two integers without using multiplication, division and modoperator.If it is overflow, return MAX_INT. 12345class Solution &amp;#123;  public int divide(int dividend, int divisor) &amp;#12">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="lowest common ancestor">
-<meta property="og:url" content="http://yoursite.com/2017/11/08/lowest-common-ancestor/index.html">
+<meta property="og:title" content="[LeetCode]29.Divide Two Integers">
+<meta property="og:url" content="http://yoursite.com/2017/11/12/LeetCode-29-Divide-Two-Integers/index.html">
 <meta property="og:site_name" content="神言乱语">
-<meta property="og:description" content="算是简单的题目。和tree有关的题目都可以朝递归的方向去思考。 tree有可能是binary search tree， 也可能不是。 是的话，直接根据两个node和root的值的关系recursively查找。 不是的话，就根据返回值是否为null来判断。 google上看来的解释  初次接触某种题型一时没有思路的时候，可以从简单的例子开始分析。  这其实是一种很好的方法，很多大神往往是非常擅于从">
+<meta property="og:description" content="Description: Divide two integers without using multiplication, division and modoperator.If it is overflow, return MAX_INT. 12345class Solution &amp;#123;  public int divide(int dividend, int divisor) &amp;#12">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-09T07:40:36.000Z">
+<meta property="og:updated_time" content="2017-11-13T06:17:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lowest common ancestor">
-<meta name="twitter:description" content="算是简单的题目。和tree有关的题目都可以朝递归的方向去思考。 tree有可能是binary search tree， 也可能不是。 是的话，直接根据两个node和root的值的关系recursively查找。 不是的话，就根据返回值是否为null来判断。 google上看来的解释  初次接触某种题型一时没有思路的时候，可以从简单的例子开始分析。  这其实是一种很好的方法，很多大神往往是非常擅于从">
+<meta name="twitter:title" content="[LeetCode]29.Divide Two Integers">
+<meta name="twitter:description" content="Description: Divide two integers without using multiplication, division and modoperator.If it is overflow, return MAX_INT. 12345class Solution &amp;#123;  public int divide(int dividend, int divisor) &amp;#12">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/08/lowest-common-ancestor/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/12/LeetCode-29-Divide-Two-Integers/"/>
 
 
 
 
 
-  <title>lowest common ancestor | 神言乱语</title>
+  <title>[LeetCode]29.Divide Two Integers | 神言乱语</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/08/lowest-common-ancestor/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/12/LeetCode-29-Divide-Two-Integers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="神神">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">lowest common ancestor</h1>
+          <h1 class="post-title" itemprop="name headline">[LeetCode]29.Divide Two Integers</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-08T20:24:12-08:00">
-                2017-11-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-12T21:38:59-08:00">
+                2017-11-12
               </time>
             
 
@@ -330,15 +330,28 @@
       
 
       
-        <p>算是简单的题目。和tree有关的题目都可以朝递归的方向去思考。</p>
-<p>tree有可能是binary search tree， 也可能不是。</p>
-<p>是的话，直接根据两个node和root的值的关系recursively查找。</p>
-<p>不是的话，就根据返回值是否为null来判断。</p>
-<p><a href="http://www.code123.cc/docs/leetcode-notes/binary_tree/lowest_common_ancestor.html" target="_blank" rel="external">google上看来的解释</a></p>
+        <p>Description: Divide two integers without using multiplication, division and mod<br>operator.<br>If it is overflow, return MAX_INT.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> dividend, <span class="keyword">int</span> divisor)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>近似除法。<br>不能用乘除，就只能用加减，以及位运算来操作了。<br>可以从被除数当中挨个减去除数，直到被除数小于0.那么减掉的次数也就是要求的近似商。</p>
 <blockquote>
-<p>初次接触某种题型一时没有思路的时候，可以从简单的例子开始分析。</p>
+<p>当除数非常小的时候，很显然这个方法用时将会很久。</p>
 </blockquote>
-<p>这其实是一种很好的方法，很多大神往往是非常擅于从简单的例子入手然后归纳出题目真正的难点，然后抽象化之后，自然而然也就有了一些思路。 <strong>选取到典型的例子也是一种重要的分析能力</strong>。</p>
+ <a id="more"></a>
+<p>可以用二分法来加速这个过程。“不断对除数*2， 直到它恰好比被除数小（即再乘2就会比被除数大）为止。<br>加倍的同时，也记录下cnt, 将被除数减掉加倍后的除数，并且结果+cnt。因为是2倍地加大，所以速度会很<br>快，指数级的速度。”</p>
+<p>乘2的原因是因为用位运算的左移操作可以代替，如果选择别的数值，无法使用位运算？</p>
+<p>这道题的难点不在于想到用位运算来代替乘2，而在于对各种Corner cases的处理。</p>
+<ul>
+<li>除数为0。 <strong>被除数为正，结果为正无穷；否则为负无穷</strong></li>
+<li>被除数为0。 <strong>直接返回0</strong></li>
+<li>被除数，除数小于0。</li>
+<li>整型溢出的问题 <strong>记录结果的符号，同号为正，异号为负。然后取绝对值进行运算</strong><blockquote>
+<p>注意： 因为int最大2147483647，最小-2147483648，最小值直接abs后会溢出，所以要先将被除数与<br>除数转换为long之后再取绝对值，以防出现溢出的情况。</p>
+</blockquote>
+</li>
+</ul>
+<p>每次将除数左移一定的位数，比如i位，使得除数恰好小于被除数，此时相当于b<em>2^i,然后再对剩下的数(a-<br>  b</em>2^i)做刚才的操作，直到剩下的数小于b为止。看b总共乘以了多少power of 2, 将其加和即可。</p>
+<p>完整的solution如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> dividend, <span class="keyword">int</span> divisor)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (divisor == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> dividend &gt;= <span class="number">0</span> ? Integer.MAX_VALUE : Integer.MIN_VALUE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (dividend == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ((dividend == Integer.MAX_VALUE &amp;&amp; divisor == <span class="number">1</span>) || (dividend == Integer.</span><br><span class="line">    MIN_VALUE &amp;&amp; divisor == -<span class="number">1</span>)) &#123;</span><br><span class="line">      <span class="keyword">return</span> Integer.MAX_VALUE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ((dividend == Integer.MIN_VALUE &amp;&amp; divisor == <span class="number">1</span>) || (dividend == Integer.</span><br><span class="line">    MAX_VALUE &amp;&amp; divisor == -<span class="number">1</span>)) &#123;</span><br><span class="line">      <span class="keyword">return</span> Integer.MIN_VALUE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> sign = ((dividend &gt; <span class="number">0</span> &amp;&amp; divisor &gt;<span class="number">0</span>) || (dividend &lt; <span class="number">0</span> &amp;&amp; divisor &lt; <span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 必须先取long再abs,</span></span><br><span class="line">    <span class="keyword">long</span> a = Math.abs((<span class="keyword">long</span>)dividend);</span><br><span class="line">    <span class="keyword">long</span> b = Math.abs((<span class="keyword">long</span>)divisor);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (a &gt;= b) &#123;</span><br><span class="line">      <span class="keyword">int</span> shift = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">while</span> (a &gt;= (b &lt;&lt; shift)) &#123;</span><br><span class="line">        shift++;</span><br><span class="line">      &#125;</span><br><span class="line">      shift--;</span><br><span class="line">      a -= b &lt;&lt; shift;</span><br><span class="line">      result += <span class="number">1</span> &lt;&lt; shift;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> sign ? result : -result;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我看了网上的不少的帖子，最喜欢<a href="https://zhengyang2015.gitbooks.io/lintcode/divide_two_integers_414.html" target="_blank" rel="external">这位大神</a>的，<br>思路很顺畅，非常的清晰。</p>
 
       
     </div>
@@ -369,8 +382,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/07/Node-js__make-it-modular/" rel="next" title="Node.js__make it modular">
-                <i class="fa fa-chevron-left"></i> Node.js__make it modular
+              <a href="/2017/11/08/写给三天后的自己/" rel="next" title="写给三天后的自己">
+                <i class="fa fa-chevron-left"></i> 写给三天后的自己
               </a>
             
           </div>
@@ -378,10 +391,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/08/第一次面试前夕/" rel="prev" title="第一次面试前夕">
-                第一次面试前夕 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
